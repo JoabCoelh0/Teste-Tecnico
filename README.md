@@ -1,88 +1,84 @@
-📌 Projeto: Lista de Usuários (JavaScript Assíncrono)
+# 📌 Lista de Usuários – JavaScript Assíncrono
 
-Este projeto tem como objetivo consumir uma API externa de usuários e exibir os dados em cards dinâmicos, aplicando conceitos fundamentais de JavaScript assíncrono, como fetch, Promises e async/await.
+Este projeto consiste em uma aplicação frontend simples que consome uma API externa de usuários e exibe as informações em **cards dinâmicos**, aplicando conceitos fundamentais de **JavaScript assíncrono**.
 
-O foco principal é demonstrar boa organização de código, tratamento de erros e manipulação do DOM.
+O objetivo é praticar e demonstrar conhecimentos em `fetch`, `Promises`, `async/await`, tratamento de erros e manipulação do DOM — comuns em desafios técnicos para **estágio frontend**.
 
-🚀 Tecnologias Utilizadas
+---
 
-HTML5
+## 🚀 Tecnologias Utilizadas
 
-CSS3
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- [Random User API](https://randomuser.me)
 
-JavaScript (ES6+)
+---
 
-API externa: Random User API
+## 📂 Estrutura de Pastas
 
-📂 Estrutura de Pastas
 📁 projeto
 ├── index.html
 ├── 📁 style
-│   └── style.css
+│ └── style.css
 └── 📁 script
-    └── script.js
+└── script.js
 
-⚙️ Funcionalidades
+yaml
+Copiar código
 
-Buscar usuários de uma API externa
+---
 
-Tratar erros de requisição
+## ⚙️ Funcionalidades
 
-Converter dados da API para um modelo próprio
+- Consumo de API externa de usuários
+- Requisições assíncronas utilizando `fetch`
+- Tratamento de erros com `try/catch`
+- Transformação de dados da API
+- Criação dinâmica de cards no DOM
+- Exibição de nome, e-mail e foto do usuário
+- Indicador de carregamento removido após renderização
 
-Exibir usuários em formato de cards
+---
 
-Mostrar imagem, nome e e-mail do usuário
+## 🔄 Funcionamento
 
-Remover indicador de carregamento após os dados serem renderizados
+1. A aplicação inicia exibindo uma mensagem de carregamento
+2. Os dados são buscados de forma assíncrona
+3. A resposta HTTP é validada (`response.ok`)
+4. Os dados são convertidos para JSON
+5. As informações são transformadas para um modelo próprio
+6. Os cards são criados dinamicamente no DOM
+7. Em caso de erro, a aplicação trata e exibe mensagens no console
 
-🔄 Funcionamento da Aplicação
+---
 
-A aplicação inicia exibindo uma mensagem de carregamento
+## 🧠 Conceitos Aplicados
 
-Os dados são buscados de forma assíncrona usando fetch
+- JavaScript assíncrono
+- Promises
+- `async` / `await`
+- Tratamento de erros
+- Consumo de API REST
+- Manipulação do DOM
+- Separação de responsabilidades (dados x interface)
 
-A resposta é validada (response.ok)
+---
 
-Os dados são convertidos para JSON
+## 📌 Estrutura dos Dados Utilizados
 
-As informações relevantes são transformadas usando map
-
-Os cards são criados dinamicamente no DOM
-
-Em caso de erro, a aplicação trata e exibe mensagens no console
-
-🧠 Conceitos Aplicados
-
-JavaScript assíncrono
-
-Promises
-
-async / await
-
-Tratamento de erros com try/catch
-
-Consumo de API REST
-
-Manipulação do DOM
-
-Separação de responsabilidades (dados x interface)
-
-📌 Exemplo de Estrutura de Dados Utilizada
+```js
 {
-  nome: "João",
-  email: "joao@email.com",
+  nome: "Maria",
+  email: "maria@email.com",
   foto: "https://randomuser.me/..."
 }
-
-▶️ Como Executar o Projeto
-
-Clone este repositório
+▶️ Como Executar
+Clone o repositório
 
 Abra o arquivo index.html no navegador
 
-Certifique-se de estar conectado à internet para o consumo da API
+Certifique-se de estar conectado à internet
 
 🎯 Objetivo do Projeto
-
-Este projeto foi desenvolvido com fins de aprendizado e prática, simulando um desafio técnico comum em processos seletivos para estágio em desenvolvimento frontend.
+Projeto desenvolvido com foco em aprendizado prático, simulando um desafio técnico comum em processos seletivos para estágio em desenvolvimento frontend.
