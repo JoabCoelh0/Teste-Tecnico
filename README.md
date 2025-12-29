@@ -67,12 +67,14 @@ Copiar código
 
 ## 📌 Estrutura dos Dados Utilizados
 
-```js
+```
 {
   nome: "Maria",
   email: "maria@email.com",
   foto: "https://randomuser.me/..."
 }
+
+```
 ▶️ Como Executar
 Clone o repositório
 
