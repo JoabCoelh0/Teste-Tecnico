@@ -17,6 +17,7 @@ async function buscarUsuarios() {
     
     } catch(error){
         console.log(`Erro ao buscar usuários: ${error.message}`)
+        throw error;
     }
 }
 
@@ -24,8 +25,6 @@ async function buscarUsuarios() {
 
 async function initCards(){
     try {
-        const carregando = document.querySelector('.loading')
-        carregando.style.display = 'none'
 
         const dados = await buscarUsuarios()
         //Container que vai conter os cards
@@ -44,31 +43,31 @@ async function initCards(){
             const containerImg = document.createElement('div')
             containerImg.classList.add('container-imagem')
             containerImg.innerHTML = `<img src="${usuarios.foto}" alt="">`
-            container.appendChild(containerImg) 
 
             //Container dados 
-            const constainerDados = document.createElement('div')
-            constainerDados.classList.add('dados-usuario')
+            const containerDados = document.createElement('div')
+            containerDados.classList.add('dados-usuario')
 
 
             // Criando H1 - Nome do User
             const nomeUser = document.createElement('h1')
             nomeUser.classList.add('nome')
             nomeUser.textContent = `${usuarios.nome}`
-            constainerDados.appendChild(nomeUser)
+            containerDados.appendChild(nomeUser)
 
             // Crando span para email
             const span = document.createElement('span')
             span.classList.add('email')
             span.textContent = `${usuarios.email}`
-            constainerDados.appendChild(span)
+            containerDados.appendChild(span)
 
             //Adicionando usuários no card
             userCard.appendChild(containerImg)
-            userCard.appendChild(constainerDados)            
+            userCard.appendChild(containerDados)            
         }
          
-
+        const carregando = document.querySelector('.loading')
+        carregando.style.display = 'none' 
 
     } catch (error) {
         console.log(`Erro ao carregar usuários: ${error.message}`);
