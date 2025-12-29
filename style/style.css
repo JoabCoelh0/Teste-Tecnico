@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +7,14 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1f2933, #111827);
+  background: linear-gradient(135deg, #0f172a, #020617);
   min-height: 100vh;
-  color: #f9fafb;
+  color: #f8fafc;
 }
 
 /* Container principal */
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -23,33 +23,35 @@ body {
 .container h1 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2.4rem;
-  letter-spacing: 1px;
+  font-size: 2.2rem;
 }
 
-/* Grid de cards */
+/* Grid com 2 colunas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
 }
 
 /* Card do usuário */
-.cards > div {
-  background: #1f2933;
-  border-radius: 16px;
-  padding: 24px 20px;
+.user-card {
+  background: #020617;
+  border-radius: 18px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 260px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.cards > div:hover {
+.user-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
 }
 
-/* Imagem do usuário */
+/* Imagem */
 .container-imagem {
   display: flex;
   justify-content: center;
@@ -57,29 +59,18 @@ body {
 }
 
 .container-imagem img {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #3b82f6;
+  border: 4px solid #38bdf8;
 }
 
-/* Dados do usuário */
-.dados-usuario {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
+/* Nome */
 .dados-usuario .nome {
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-.dados-usuario .email {
-  font-size: 0.95rem;
-  color: #9ca3af;
-  word-break: break-all;
+  letter-spacing: 0.5px;
 }
 
 /* Loading */
@@ -87,19 +78,12 @@ body {
   grid-column: 1 / -1;
   text-align: center;
   font-size: 1.1rem;
-  color: #9ca3af;
-  animation: pulse 1.5s infinite;
+  color: #94a3b8;
 }
 
-@keyframes pulse {
-  0% { opacity: 0.4; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 600px) {
-  .container h1 {
-    font-size: 1.8rem;
+  .cards {
+    grid-template-columns: 1fr;
   }
 }

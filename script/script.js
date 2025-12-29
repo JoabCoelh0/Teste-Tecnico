@@ -32,6 +32,13 @@ async function initCards(){
         const container = document.querySelector('.cards')
 
         for(let usuarios of dados){
+            //criando user card
+            const userCard = document.createElement('div')
+            userCard.classList.add('user-card')
+            //Colocando o card dentro do  container
+            container.appendChild(userCard)
+            
+
 
             //constainer de imagem 
             const containerImg = document.createElement('div')
@@ -56,11 +63,9 @@ async function initCards(){
             span.textContent = `${usuarios.email}`
             constainerDados.appendChild(span)
 
-            //Adiconando tudo dentro do containar
-
-            container.appendChild(constainerDados)
-            console.log(usuarios)
-
+            //Adicionando usuários no card
+            userCard.appendChild(containerImg)
+            userCard.appendChild(constainerDados)            
         }
          
 
