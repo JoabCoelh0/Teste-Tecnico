@@ -1,113 +1,86 @@
-📌 Desafio Técnico – Estágio Front-end (JavaScript)
+# 📌 Lista de Usuários – JavaScript Assíncrono
 
-Este projeto foi desenvolvido como parte de um desafio técnico para vaga de estágio, com o objetivo de demonstrar conhecimentos em JavaScript assíncrono, consumo de API REST, manipulação de dados e renderização no DOM, utilizando JavaScript puro.
+Este projeto consiste em uma aplicação frontend simples que consome uma API externa de usuários e exibe as informações em **cards dinâmicos**, aplicando conceitos fundamentais de **JavaScript assíncrono**.
 
-🎯 Objetivo do Projeto
+O objetivo é praticar e demonstrar conhecimentos em `fetch`, `Promises`, `async/await`, tratamento de erros e manipulação do DOM — comuns em desafios técnicos para **estágio frontend**.
 
-Consumir uma API pública de usuários e exibir as informações de forma organizada em uma página web, aplicando boas práticas de:
+---
 
-Programação assíncrona
+## 🚀 Tecnologias Utilizadas
 
-Tratamento de erros
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- [Random User API](https://randomuser.me)
 
-Transformação de dados
+---
 
-Organização de código e pastas
+## 📂 Estrutura de Pastas
 
-🌐 API Utilizada
+📁 projeto
+├── index.html
+├── 📁 style
+│ └── style.css
+└── 📁 script
+└── script.js
 
-API pública de usuários:
+yaml
+Copiar código
 
-https://jsonplaceholder.typicode.com/users
+---
 
-🧩 Funcionalidades
+## ⚙️ Funcionalidades
 
-Buscar usuários de uma API externa
+- Consumo de API externa de usuários
+- Requisições assíncronas utilizando `fetch`
+- Tratamento de erros com `try/catch`
+- Transformação de dados da API
+- Criação dinâmica de cards no DOM
+- Exibição de nome, e-mail e foto do usuário
+- Indicador de carregamento removido após renderização
 
-Validar resposta HTTP (response.ok)
+---
 
-Tratar erros com try/catch
+## 🔄 Funcionamento
 
-Transformar dados usando map
+1. A aplicação inicia exibindo uma mensagem de carregamento
+2. Os dados são buscados de forma assíncrona
+3. A resposta HTTP é validada (`response.ok`)
+4. Os dados são convertidos para JSON
+5. As informações são transformadas para um modelo próprio
+6. Os cards são criados dinamicamente no DOM
+7. Em caso de erro, a aplicação trata e exibe mensagens no console
 
-Exibir dinamicamente no DOM:
+---
 
-Nome
+## 🧠 Conceitos Aplicados
 
-Email
+- JavaScript assíncrono
+- Promises
+- `async` / `await`
+- Tratamento de erros
+- Consumo de API REST
+- Manipulação do DOM
+- Separação de responsabilidades (dados x interface)
 
-Cidade
+---
 
-Exibir mensagem de carregamento
+## 📌 Estrutura dos Dados Utilizados
 
-Exibir mensagem de erro em caso de falha
+```
+{
+  nome: "Maria",
+  email: "maria@email.com",
+  foto: "https://randomuser.me/..."
+}
 
-🛠️ Tecnologias Utilizadas
-
-HTML5
-
-CSS3
-
-JavaScript (ES6+)
-
-fetch
-
-async/await
-
-map
-
-try/catch
-
-Nenhuma biblioteca ou framework externo foi utilizado.
-
-📁 Estrutura do Projeto
-📦 projeto
- ┣ 📂 scripts
- ┃ ┗ 📜 script.js
- ┣ 📂 styles
- ┃ ┗ 📜 style.css
- ┣ 📜 index.html
- ┗ 📜 README.md
-
-▶️ Como Executar o Projeto
-
-Clone ou baixe este repositório
+```
+▶️ Como Executar
+Clone o repositório
 
 Abra o arquivo index.html no navegador
 
-Os usuários serão carregados automaticamente
+Certifique-se de estar conectado à internet
 
-Não é necessário servidor ou instalação de dependências.
-
-🧠 Conceitos Aplicados
-
-Programação assíncrona com async/await
-
-Consumo de API REST
-
-Validação de resposta HTTP
-
-Manipulação e transformação de dados
-
-Organização de código em funções
-
-Manipulação do DOM
-
-Separação de responsabilidades
-
-🚀 Possíveis Melhorias Futuras
-
-Filtro de usuários
-
-Campo de busca
-
-Paginação
-
-Loading animado
-
-Refatoração para React
-
-👨‍💻 Autor
-
-Projeto desenvolvido por Joab Coelho
-Como exercício prático de estudo em JavaScript e preparação para processos seletivos de estágio.
+🎯 Objetivo do Projeto
+Projeto desenvolvido com foco em aprendizado prático, simulando um desafio técnico comum em processos seletivos para estágio em desenvolvimento frontend.
