@@ -1,48 +1,10 @@
-📌 Desafio Técnico – Estágio Front-end (JavaScript)
+📌 Projeto: Lista de Usuários (JavaScript Assíncrono)
 
-Este projeto foi desenvolvido como parte de um desafio técnico para vaga de estágio, com o objetivo de demonstrar conhecimentos em JavaScript assíncrono, consumo de API REST, manipulação de dados e renderização no DOM, utilizando JavaScript puro.
+Este projeto tem como objetivo consumir uma API externa de usuários e exibir os dados em cards dinâmicos, aplicando conceitos fundamentais de JavaScript assíncrono, como fetch, Promises e async/await.
 
-🎯 Objetivo do Projeto
+O foco principal é demonstrar boa organização de código, tratamento de erros e manipulação do DOM.
 
-Consumir uma API pública de usuários e exibir as informações de forma organizada em uma página web, aplicando boas práticas de:
-
-Programação assíncrona
-
-Tratamento de erros
-
-Transformação de dados
-
-Organização de código e pastas
-
-🌐 API Utilizada
-
-API pública de usuários:
-
-https://jsonplaceholder.typicode.com/users
-
-🧩 Funcionalidades
-
-Buscar usuários de uma API externa
-
-Validar resposta HTTP (response.ok)
-
-Tratar erros com try/catch
-
-Transformar dados usando map
-
-Exibir dinamicamente no DOM:
-
-Nome
-
-Email
-
-Cidade
-
-Exibir mensagem de carregamento
-
-Exibir mensagem de erro em caso de falha
-
-🛠️ Tecnologias Utilizadas
+🚀 Tecnologias Utilizadas
 
 HTML5
 
@@ -50,64 +12,77 @@ CSS3
 
 JavaScript (ES6+)
 
-fetch
+API externa: Random User API
 
-async/await
+📂 Estrutura de Pastas
+📁 projeto
+├── index.html
+├── 📁 style
+│   └── style.css
+└── 📁 script
+    └── script.js
 
-map
+⚙️ Funcionalidades
 
-try/catch
+Buscar usuários de uma API externa
 
-Nenhuma biblioteca ou framework externo foi utilizado.
+Tratar erros de requisição
 
-📁 Estrutura do Projeto
-📦 projeto
- ┣ 📂 scripts
- ┃ ┗ 📜 script.js
- ┣ 📂 styles
- ┃ ┗ 📜 style.css
- ┣ 📜 index.html
- ┗ 📜 README.md
+Converter dados da API para um modelo próprio
 
-▶️ Como Executar o Projeto
+Exibir usuários em formato de cards
 
-Clone ou baixe este repositório
+Mostrar imagem, nome e e-mail do usuário
 
-Abra o arquivo index.html no navegador
+Remover indicador de carregamento após os dados serem renderizados
 
-Os usuários serão carregados automaticamente
+🔄 Funcionamento da Aplicação
 
-Não é necessário servidor ou instalação de dependências.
+A aplicação inicia exibindo uma mensagem de carregamento
+
+Os dados são buscados de forma assíncrona usando fetch
+
+A resposta é validada (response.ok)
+
+Os dados são convertidos para JSON
+
+As informações relevantes são transformadas usando map
+
+Os cards são criados dinamicamente no DOM
+
+Em caso de erro, a aplicação trata e exibe mensagens no console
 
 🧠 Conceitos Aplicados
 
-Programação assíncrona com async/await
+JavaScript assíncrono
+
+Promises
+
+async / await
+
+Tratamento de erros com try/catch
 
 Consumo de API REST
 
-Validação de resposta HTTP
-
-Manipulação e transformação de dados
-
-Organização de código em funções
-
 Manipulação do DOM
 
-Separação de responsabilidades
+Separação de responsabilidades (dados x interface)
 
-🚀 Possíveis Melhorias Futuras
+📌 Exemplo de Estrutura de Dados Utilizada
+{
+  nome: "João",
+  email: "joao@email.com",
+  foto: "https://randomuser.me/..."
+}
 
-Filtro de usuários
+▶️ Como Executar o Projeto
 
-Campo de busca
+Clone este repositório
 
-Paginação
+Abra o arquivo index.html no navegador
 
-Loading animado
+Certifique-se de estar conectado à internet para o consumo da API
 
-Refatoração para React
+🎯 Objetivo do Projeto
 
-👨‍💻 Autor
-
-Projeto desenvolvido por Joab Coelho
-Como exercício prático de estudo em JavaScript e preparação para processos seletivos de estágio.
+Este projeto foi desenvolvido com fins de aprendizado e prática, simulando um desafio técnico comum em processos seletivos para estágio em desenvolvimento frontend.
